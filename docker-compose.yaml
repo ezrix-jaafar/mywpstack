@@ -1,0 +1,16 @@
+version: "3"
+
+services:
+  wordpress:
+    build: .
+    ports:
+      - "8080:80"
+    volumes:
+      - ./wp-content:/var/www/html/wp-content
+    environment:
+      WORDPRESS_DB_HOST: ezrix_ezrix_db
+      WORDPRESS_DB_USER: mariadb
+      WORDPRESS_DB_PASSWORD: Jieha-146
+      WORDPRESS_DB_NAME: ezrix
+
+    restart: always
